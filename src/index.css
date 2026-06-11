@@ -1,0 +1,67 @@
+body{
+  background-color: #f8dde5;
+  font-family: 'Playfair Display', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.titulo {
+  text-align: center;
+  background-color: #FFFFFF;
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(235, 140, 153, 0.15);
+  max-width: 350px;
+  width: 100%;
+}
+h1{
+  font-family: 'Playfair Display', serif;
+  color: #693d1f;
+  margin: 0;
+}
+.subtitulo{
+  color: #f58caf;
+  margin-top: 5px;
+  font-size:1rem;
+}
+.status {
+  margin: 30px 0;
+}
+.emoji{
+  font-size:4.5rem;
+  margin-bottom: 10px;
+}
+.status h1{
+  font-family:'Playfair Display',serif;
+  font-size: 1.4rem;
+  color: #693d1f !important;
+}
+.humortexto{
+  font-family: 'Playfair Display',serif;
+  font-size: 1.4rem;
+  color:#f58caf;
+
+}
+.botoes{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.botoes button{
+  background-color: #ecbbca;
+  color: #693d1f;
+  border: 1px solid #fcb3c4;
+  padding: 12px;
+  border-radius: 12px;
+  font-family: 'Poppins',sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.botoes button:hover{
+  background-color: #d46a7b;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
