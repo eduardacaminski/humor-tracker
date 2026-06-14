@@ -1,11 +1,15 @@
+* {
+  box-sizing: border-box;
+}
 body{
   background-color: #f8dde5;
   font-family: 'Playfair Display', serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
+  padding: 1rem;
 }
 .titulo {
   text-align: center;
@@ -64,4 +68,23 @@ h1{
   background-color: #d46a7b;
   color: #FFFFFF;
   transform: translateY(-2px);
+}
+@media (max-width: 480px) {
+  .titulo {
+    padding: 25px 20px; 
+    border-radius: 24px;  
+  }
+
+  .emoji {
+    font-size: 3.8rem;    
+  }
+
+  .status {
+    margin: 20px 0;       
+  }
+
+  .botoes button {
+    padding: 14px;        
+    font-size: 0.95rem;
+  }
 }
