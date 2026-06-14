@@ -1,28 +1,29 @@
 # Mood Tracker Application
 
-A web-based data application focused on behavioral entry logging, temporal data persistence, and dynamic interface rendering.
+A minimal web application focused on real-time emotional state switching, component state management, and short-circuit conditional rendering.
 
-## Project overview
+## Project Overview
 
-Developed in React with TypeScript, this application processes user-selected emotional metrics, performing data serialization to store historical tracking logs and updating the layout dynamically based on real-time inputs.
+Developed in React with TypeScript, this application processes user-selected emotional metrics, performing immediate state updates to dynamically switch and render corresponding emojis and status text on the screen.
 
-## Technologies and concepts used
+## Technologies and Concepts Used
 
 * **Language:** TypeScript (React Framework)
 * **Tools:** Vite, VS Code, GitHub Actions
-* **Concepts:** Component state synchronization, local storage data persistence, array mutations, automated deployment pipelines.
+* **Concepts:** Component state management (`useState`), custom union types (`tipohumor`), short-circuit evaluation (`&&`), and responsive UI layout.
 
 ## Implementation
 
-* **Data Persistence:** Applied browser API integration (`localStorage`) to serialize and save historical mood tracking metrics, preventing data loss across active sessions.
-* **State Architecture:** Utilized React state hooks (`useState`) to capture real-time behavioral inputs and update the main tracking array dynamically.
-* **Interface Mapping:** Implemented a clean, component-driven architecture with responsive styling to map and render historical logs sequentially.
+* **State Modification:** Applied a single React state hook initialized with a default string format to track the active emotional selection without complex array structures.
+* **Strict Type Assignment:** Implemented a custom union type (`tipohumor`) to strict-type and restrict valid state values to 'Feliz', 'Cansada', or 'Focada'.
+* **Conditional UI Mapping:** Utilized declarative short-circuit evaluations (`&&`) within the JSX structure to render unique aesthetic emojis dynamically based on the active state value.
 
 ## How It Works
 
-The program captures user entries and maintains records using state handlers and browser storage operations:
+The program captures inputs and modifies the displayed elements using a direct state handler and conditional evaluation:
 
-* **Data Logging:** Appends the selected mood payload to the existing tracking matrix and synchronizes it with local storage:
-  ```typescript
-  const updatedLogs = [...logs, newMoodEntry];
-  localStorage.setItem('mood-logs', JSON.stringify(updatedLogs));
+* **State Switching:** Clicking a footer button triggers the state modifier function, overriding the current string value and forcing a component re-render:
+  ```tsx
+  const [humor, sethumor] = useState<tipohumor>('Feliz');
+  
+  <button onClick={() => sethumor('Cansada')}>🍰 Cansada</button>
